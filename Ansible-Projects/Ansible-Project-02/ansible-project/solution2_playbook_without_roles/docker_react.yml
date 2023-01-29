@@ -21,21 +21,21 @@
         dest: /home/ec2-user/react 
 
     - name: remove container and image if exist
-      shell: "docker ps -q --filter 'name=react' && docker stop react && docker rm -fv react && docker image rm -f ysndocker161134/react || echo 'Not Found'" 
+      shell: "docker ps -q --filter 'name=react' && docker stop react && docker rm -fv react && docker image rm -f yasinkayadevops/react || echo 'Not Found'" 
 
     - name: build container image
       docker_image:
-        name: ysndocker161134/react
+        name: yasinkayadevops/react
         build: 
           path: /home/ec2-user/react   
         source: build
         state: present         
-# docker build -t ysndocker161134/react .  
+# docker build -t yasinkayadevops/react .  
 
     - name: create react docker container
       docker_container:
         name: react
-        image: ysndocker161134/react
+        image: yasinkayadevops/react
         state: started
         ports: 
           - "3000:3000" 

@@ -2,4 +2,4 @@
 # vars file for nodejs
 container_path: /home/ec2-user/nodejs
 container_name: nodejs
-image_name: ysndocker161134/nodejs
+image_name: yasinkayadevops/nodejs

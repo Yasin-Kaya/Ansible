@@ -2,4 +2,4 @@
 # vars file for react
 container_path: /home/ec2-user/react
 container_name: react
-image_name: ysndocker161134/react
+image_name: yasinkayadevops/react

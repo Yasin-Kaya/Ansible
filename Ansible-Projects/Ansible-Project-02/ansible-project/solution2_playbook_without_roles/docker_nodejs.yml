@@ -21,21 +21,21 @@
         dest: /home/ec2-user/nodejs 
 
     - name: remove container and image if exist
-      shell: "docker ps -q --filter 'name=nodejs' && docker stop nodejs && docker rm -fv nodejs && docker image rm -f ysndocker161134/nodejs || echo 'Not Found'" 
+      shell: "docker ps -q --filter 'name=nodejs' && docker stop nodejs && docker rm -fv nodejs && docker image rm -f yasinkayadevops/nodejs || echo 'Not Found'" 
 
     - name: build container image
       docker_image:
-        name: ysndocker161134/nodejs
+        name: yasinkayadevops/nodejs
         build: 
           path: /home/ec2-user/nodejs   
         source: build
         state: present         
-# docker build -t ysndocker161134/nodejs .  
+# docker build -t yasinkayadevops/nodejs .  
 
     - name: create nodejs docker container
       docker_container:
         name: nodejs
-        image: ysndocker161134/nodejs
+        image: yasinkayadevops/nodejs
         state: started
         ports: 
           - "5000:5000" 

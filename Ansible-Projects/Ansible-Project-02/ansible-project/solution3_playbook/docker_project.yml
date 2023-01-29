@@ -65,7 +65,7 @@
   vars: 
     postgre_container: /home/ec2-user/postgresql
     container_name: postgre
-    image_name: ysndocker161134/postgre
+    image_name: yasinkayadevops/postgre
   tasks:
     - name: create build directory
       file:
@@ -114,7 +114,7 @@
   vars: 
     container_path: /home/ec2-user/nodejs
     container_name: nodejs
-    image_name: ysndocker161134/nodejs
+    image_name: yasinkayadevops/nodejs
   tasks:
     - name: create build directory
       file:
@@ -159,7 +159,7 @@
   vars: 
     container_path: /home/ec2-user/react
     container_name: react
-    image_name: ysndocker161134/react
+    image_name: yasinkayadevops/react
   tasks:
     - name: create build directory
       file:

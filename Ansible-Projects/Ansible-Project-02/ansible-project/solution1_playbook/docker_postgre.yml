@@ -78,21 +78,21 @@
         dest: /home/ec2-user/postgresql 
 
     - name: remove container and image if exist
-      shell: "docker ps -q --filter 'name=postgre' && docker stop postgre && docker rm -fv postgre && docker image rm -f ysndocker161134/postgre || echo 'Not Found'" 
+      shell: "docker ps -q --filter 'name=postgre' && docker stop postgre && docker rm -fv postgre && docker image rm -f yasinkayadevops/postgre || echo 'Not Found'" 
 
     - name: build container image
       docker_image:
-        name: ysndocker161134/postgre
+        name: yasinkayadevops/postgre
         build: 
           path: /home/ec2-user/postgresql   
         source: build
         state: present         
-# docker build -t ysndocker161134/postgre .  
+# docker build -t yasinkayadevops/postgre .  
 
     - name: create postgresql docker container
       docker_container:
         name: postgre
-        image: ysndocker161134/postgre
+        image: yasinkayadevops/postgre
         state: started
         ports: 
           - "5432:5432" 
