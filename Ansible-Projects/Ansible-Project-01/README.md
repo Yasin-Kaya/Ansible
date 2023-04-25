@@ -20,3 +20,8 @@ The purpose of this project is to give  the knowledge of provisioning a web and 
 - Step 6 - Install, Start and Enable Apache Web Server and Other Dependencies
 
 - Step 7 - Pull the Code from GitHub repo and Make Necessary Changes
+
+## Contact
+
+- Please contact me to access the project files.
+    * yasinkaya.devops@gmail.com
